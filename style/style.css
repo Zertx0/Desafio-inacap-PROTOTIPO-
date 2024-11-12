@@ -1,0 +1,177 @@
+/* Variables globales */
+:root {
+    --lakers-purple: #552583;
+    --lakers-gold: #FDB927;
+    --transparent-white: rgba(255, 255, 255, 0.8);
+    --transparent-dark: rgba(33, 37, 41, 0.9);
+  }
+  
+  /* Reset y estilos base */
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  /* Estilos del body y fondo */
+  body {
+    background-color: var(--lakers-purple) !important;
+    background-image: url(https://www.mundodeportivo.com/files/og_thumbnail/files/fp/uploads/2023/10/31/6540ede1c6435.r_d.649-487-9231.jpeg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+  }
+  
+  /* Navbar */
+  .navbar.navbar-expand-lg {
+    background-color: var(--transparent-dark) !important;
+  }
+  
+  .navbar-brand, 
+  .nav-link {
+    color: white !important;
+  }
+  
+  /* Main content */
+  main {
+    background-color: var(--transparent-white) !important;
+    padding: 20px !important;
+    margin: 20px auto !important;
+    max-width: 1200px !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Carousel */
+  .carousel-inner {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .carousel-inner img {
+    max-width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+  }
+  
+  .carousel-item img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modal styles */
+  .modal-content {
+    background-color: var(--lakers-purple);
+    border: none;
+    color: white;
+  }
+  
+  .modal-header {
+    border: none;
+    padding: 1rem;
+  }
+  
+  .btn-close {
+    background-color: white;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+  
+  .btn-close:hover {
+    opacity: 0.75;
+  }
+  
+  #modalImage {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Botones */
+  .modal-footer .btn-primary {
+    background-color: var(--lakers-gold);
+    border-color: var(--lakers-gold);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .modal-footer .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  /* Media Queries */
+  @media (min-width: 992px) {
+    .modal-xl {
+      max-width: 90vw;
+    }
+  }
+  
+  /* Utilidades */
+  .container-fluid {
+    z-index: 1;
+    position: relative;
+  }
+
+
+/* aqui va lo nuevo  */
+/* Estilos para los acordeones */
+.accordion-button:not(.collapsed) {
+    color: white !important;
+    background-color: #552583 !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,.125) !important;
+}
+
+.accordion-button.collapsed {
+    background-color: #FDB927 !important;
+    color: #552583 !important;
+}
+
+.accordion-item {
+    border: 1px solid rgba(0,0,0,.125) !important;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-body {
+    background-color: #fff;
+}
+
+/* Estilos para las cards dentro del acordeón */
+.accordion-body .card {
+    border: 1px solid rgba(0,0,0,.125);
+    transition: transform 0.3s ease;
+}
+
+.accordion-body .card:hover {
+    transform: translateY(-5px);
+}
+
+.accordion-body ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.accordion-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para los títulos dentro del acordeón */
+.accordion-body h5 {
+    color: #552583;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #FDB927;
+    padding-bottom: 0.5rem;
+}
